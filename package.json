@@ -1,21 +1,25 @@
 {
-  "name": "react-typescript",
+  "name": "titanes-rugby-club",
   "version": "1.0.0",
-  "description": "React and TypeScript example starter project",
-  "keywords": [
-    "typescript",
-    "react",
-    "starter"
-  ],
+  "description": "a SPA page to Titanes Rugby Club.",
+  "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
+    "@material-ui/core": "4.11.0",
+    "@material-ui/icons": "4.9.1",
+    "classnames": "2.2.6",
+    "history": "5.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "6.1.0",
+    "react-router-dom": "5.2.0",
     "react-scripts": "3.3.0"
   },
   "devDependencies": {
     "@types/react": "16.9.19",
     "@types/react-dom": "16.9.5",
+    "@types/react-helmet": "6.0.0",
+    "@types/react-router-dom": "5.1.5",
     "typescript": "3.7.5"
   },
   "scripts": {

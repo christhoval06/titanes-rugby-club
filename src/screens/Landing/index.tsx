@@ -20,7 +20,7 @@ const Landing: React.SFC = props => {
 			<Header
 				color="transparent"
 				routes={dashboardRoutes}
-				brand="Material Kit React"
+				brand="Titanes RC"
 				rightLinks={<HeaderLinks />}
 				fixed
 				changeColorOnScroll={{

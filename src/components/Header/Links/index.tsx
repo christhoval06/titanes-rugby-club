@@ -5,6 +5,9 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Tooltip from '@material-ui/core/Tooltip';
 import { Apps, CloudDownload } from '@material-ui/icons';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 import CustomDropdown from 'components/CustomDropdown';
 import Button from 'components/Button';
@@ -68,7 +71,7 @@ const Links: React.SFC = () => {
 						color="transparent"
 						className={classes.navLink}
 					>
-						<i className={classes.socialIcons + ' fab fa-twitter'} />
+						<TwitterIcon className={classes.socialIcons + ' fab fa-twitter'} />
 					</Button>
 				</Tooltip>
 			</ListItem>
@@ -85,7 +88,7 @@ const Links: React.SFC = () => {
 						target="_blank"
 						className={classes.navLink}
 					>
-						<i className={classes.socialIcons + ' fab fa-facebook'} />
+						<FacebookIcon className={classes.socialIcons + ' fab fa-facebook'} />
 					</Button>
 				</Tooltip>
 			</ListItem>
@@ -102,7 +105,7 @@ const Links: React.SFC = () => {
 						target="_blank"
 						className={classes.navLink}
 					>
-						<i className={classes.socialIcons + ' fab fa-instagram'} />
+						<InstagramIcon className={classes.socialIcons + ' fab fa-instagram'} />
 					</Button>
 				</Tooltip>
 			</ListItem>

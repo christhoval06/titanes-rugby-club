@@ -16,7 +16,7 @@ const theme = createMuiTheme({
 				},
 				body: {
 					textDecoration: 'none',
-					fontWeight: '700',
+					fontWeight: 'normal',
 					fontFamily: `"Roboto", "Times New Roman", serif`,
 					backgroundColor: '#f5f5f5',
 				},

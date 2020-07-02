@@ -1,13 +1,15 @@
 import React from 'react';
 import classNames from 'classnames';
-import { makeStyles, Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 
 import styles from './styles';
 
 import Header from 'components/Header';
 import HeaderLinks from 'components/Header/Links';
+import SocialsLinks from 'components/Header/Socials';
 import Parallax from 'components/Parallax';
 import Grid from 'components/Grid';
+import Button from 'components/Button';
 
 const useStyles = makeStyles(styles);
 
@@ -18,9 +20,22 @@ const Landing: React.SFC = props => {
 	return (
 		<>
 			<Header
-				color="transparent"
+				color="gray"
 				routes={dashboardRoutes}
-				brand="Titanes RC"
+				brandComponent={
+					<div className={classes.brand}>
+						<img
+							className={classes.brandImage}
+							src={require('assets/images/titanes_logo.png')}
+							alt="Titanes Rugby Club"
+						/>
+						<div className={classes.brandText}>
+							<h1>rugby</h1>
+							<h1>club</h1>
+						</div>
+					</div>
+				}
+				socialLinks={<SocialsLinks />}
 				rightLinks={<HeaderLinks />}
 				fixed
 				changeColorOnScroll={{
@@ -36,7 +51,7 @@ const Landing: React.SFC = props => {
 							<h3 className={classes.subtitle}>Hemandad, Honor y Disciplina</h3>
 							<br />
 							<Button
-								color="primary"
+								color="danger"
 								size="large"
 								href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
 								target="_blank"

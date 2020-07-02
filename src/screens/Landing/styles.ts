@@ -6,6 +6,25 @@ export default {
 		color: '#FFFFFF',
 		...container,
 	},
+	brand: {
+		display: 'flex',
+		alignItems: 'center',
+	},
+	brandImage: {
+		width: '70px',
+		height: '70px',
+	},
+	brandText: {
+		textTransform: 'uppercase',
+		marginTop: '-15px',
+		marginLeft: '-10px',
+		'& h1': {
+			margin: 0,
+			'&:nth-child(2)': {
+				lineHeight: 0,
+			},
+		},
+	},
 	title: {
 		...title,
 		display: 'inline-block',

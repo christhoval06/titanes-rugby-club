@@ -1,4 +1,5 @@
 import {
+	containerFluid,
 	container,
 	defaultFont,
 	primaryColor,
@@ -16,8 +17,8 @@ export default {
 	appBar: {
 		display: 'flex',
 		border: '0',
-		borderRadius: '3px',
-		padding: '0.625rem 0',
+		// borderRadius: '3px',
+		// 	padding: '0.625rem 0',
 		marginBottom: '20px',
 		color: '#555',
 		width: '100%',
@@ -29,6 +30,7 @@ export default {
 		justifyContent: 'flex-start',
 		position: 'relative',
 		zIndex: 'unset',
+		flexDirection: 'column',
 	},
 	absolute: {
 		position: 'absolute',
@@ -37,6 +39,13 @@ export default {
 	fixed: {
 		position: 'fixed',
 		zIndex: '1100',
+	},
+	appBarContainer: {
+		display: 'block',
+	},
+	socialContainer: {
+		...containerFluid,
+		boxShadow: 'none !important',
 	},
 	container: {
 		...container,
@@ -100,7 +109,7 @@ export default {
 	transparent: {
 		backgroundColor: 'transparent !important',
 		boxShadow: 'none',
-		paddingTop: '25px',
+		paddingTop: '0px',
 		color: '#FFFFFF',
 	},
 	dark: {

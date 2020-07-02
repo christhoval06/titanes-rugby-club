@@ -23,6 +23,8 @@ interface HeaderProps {
 	color?: Color;
 	rightLinks?: React.ReactNode;
 	leftLinks: React.ReactNode;
+	socialLinks?: React.ReactNode;
+	brandComponent?: React.ReactNode;
 	brand: string;
 	fixed: boolean;
 	absolute: boolean;
@@ -34,9 +36,11 @@ const Header: React.SFC<HeaderProps> = ({
 	color,
 	rightLinks,
 	leftLinks,
+	socialLinks,
 	brand,
 	fixed,
 	absolute,
+	brandComponent,
 }) => {
 	const classes = useStyles();
 	const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -70,9 +74,17 @@ const Header: React.SFC<HeaderProps> = ({
 		[classes.absolute]: absolute,
 		[classes.fixed]: fixed,
 	});
-	const brandComponent = <Button className={classes.title}>{brand}</Button>;
+	brandComponent = brandComponent || <Button className={classes.title}>{brand}</Button>;
 	return (
 		<AppBar className={appBarClasses}>
+			<div className={[classes.socialContainer, classes.dark].join(' ')}>
+				<Toolbar className={classes.container}>
+					<div className={classes.flex}>
+						<p>Para contactarnos llama a Soma</p>
+					</div>
+					{socialLinks}
+				</Toolbar>
+			</div>
 			<Toolbar className={classes.container}>
 				{leftLinks !== undefined ? brandComponent : null}
 				<div className={classes.flex}>
